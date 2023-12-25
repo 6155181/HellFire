@@ -1,0 +1,154 @@
+<resources>
+    <string name="app_name">HellFire</string>
+    <string name="dive_in">DIVE IN</string>
+    <string name="new_here">NEW HERE</string>
+    <!-- A few things... page                -->
+    <string name="a_few"><b>A few things before we start.</b></string>
+    <string name="follow_the">Follow the rules below for the best experience.</string>
+    <string name="respect"><b>Respect. Walk. What did you say?</b></string>
+    <string name="respect1">Pantera said so, and we agree. We respect our fellas, and so will you.</string>
+    <string name="privacy"><b>Privacy is on top.</b></string>
+    <string name="next_privacy">In this app, we blocked the screenshot option to protect you. Dont share
+        personal information to soon.</string>
+    <string name="next_privacy1">Dont share personal information to soon.</string>
+    <string name="stay"><b>Stay true to yourself, and others.</b></string>
+    <string name="stay1">We all get disappointed when when we see a different person that the picture. Dont be that person.</string>
+    <string name="help_us"><b>Help us, help others.</b></string>
+    <string name="help_us1">Report when its necessary, well take care of it.</string>
+    <string name="agree"><b>By clicking "I agree" you also agree to our privacy policy and the terms of use.</b></string>
+
+    <!--                  end page           -->
+    <string name="privacy_page"><b>Privacy Policy for the HELLFIRE</b></string>
+    <string name="privacy_page1">At <b>HELLFIRE</b>, we take your privacy very seriously.
+        This Privacy Policy describes how we collect, use, and share information
+        about you when you use our dating app.</string>
+    <string name="privacy_page2"><b>Information We Collect</b></string>
+    <string name="privacy_page3">We collect information you provide to us directly, such as your name, email address,
+        date of birth, gender, location, and photos.
+        We also collect information about your device, such as your IP address, device type, and browser type.</string>
+    <string name="privacy_page4"><b>How We Use Your Information</b></string>
+    <string name="privacy_page5">We use your information to provide and improve our dating app, to customize your
+        user experience, to communicate with you, and to comply with legal obligations.</string>
+    <string name="privacy_page6"><b>How We Share Your Information</b></string>
+    <string name="privacy_page7">We may share your information with third-party service providers who help us operate
+        our dating app, such as hosting and data storage providers. We may also share your information if required
+        by law or if we believe in good faith that disclosure is necessary to protect our rights or property.</string>
+    <string name="privacy_page8"><b>Your Choices</b></string>
+    <string name="privacy_page9">You can choose not to provide certain information to us, but this may limit your
+        ability to use some features of our dating app. You can also control the types of notifications you receive
+        from us by adjusting your settings.</string>
+    <string name="privacy_page10"><b>Security</b></string>
+    <string name="privacy_page11">We take reasonable measures to protect your information from unauthorized access,
+        disclosure, or alteration. However, no method of transmission over the internet or electronic storage is 100%
+        secure, so we cannot guarantee absolute security.</string>
+    <string name="privacy_page12"><b>Children Privacy</b></string>
+    <string name="privacy_page13">Our dating app is not intended for use by children under the age of 18. We do not knowingly
+        collect or solicit personal information from anyone under the age of 18.</string>
+    <string name="privacy_page14"><b>Changes to This Privacy Policy</b></string>
+    <string name="privacy_page15">We may update this Privacy Policy from time to time. If we make material changes to the policy,
+        we will notify you by email or by posting a notice in our app.</string>
+    <string name="privacy_page16"><b>Contact Us</b></string>
+    <string name="privacy_page17">If you have any questions or concerns about our Privacy Policy, please contact us at
+        hellfiresupp@gmail.com.</string>
+
+    <!--           end Privacy Page                -->
+
+    <!--           Terms Page                      -->
+    <string name="terms"><b>Terms of Use for the HELLFIRE</b></string>
+    <string name="terms1">These Terms of Use (“Terms”) govern your use of <b>HELLFIRE</b>- a dating app for metalheads. By using
+        the App, you agree to these Terms. If you do not agree to these Terms, you may not use the App.</string>
+    <string name="terms2"><b>Use of the App</b></string>
+    <string name="terms3">You must be 18 years or older to use the App. You agree to use the App for lawful purposes
+        only and in compliance with all applicable laws and regulations. You also agree not to:</string>
+    <string name="terms4">Create a false identity or use the App on behalf of someone else</string>
+    <string name="terms5">Harass, threaten, or harm other users</string>
+    <string name="terms6">Engage in any activity that violates the rights of others, including intellectual property rights</string>
+    <string name="terms7">Use the App for commercial purposes, such as advertising or selling products or services</string>
+    <string name="terms8"><b>User Content</b></string>
+    <string name="terms9">You are solely responsible for any content you post or share on the App, including your profile information
+        and messages with other users. You represent and warrant that you have the right to post and share your content and that your
+        content does not infringe the rights of others.</string>
+    <string name="terms10">By posting or sharing your content on the App, you grant us a non-exclusive, royalty-free, transferable,
+        sublicense, worldwide license to use, copy, modify, create derivative works based on, distribute, publicly display, publicly
+        perform, and otherwise exploit in any manner such content in all formats and distribution channels now known or hereafter
+        devised (including in connection with the App and our business and on third-party sites and services), without further notice
+        to or consent from you, and without the requirement of payment to you or any other person or entity.</string>
+    <string name="terms11"><b>Intellectual Property</b></string>
+    <string name="terms12">Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.</string>
+    <string name="terms13">You may store files that are automatically cached by your Web browser for display enhancement purposes.</string>
+    <string name="terms14">You may print or download one copy of a reasonable number of pages of the App for your own personal,
+        non-commercial use and not for further reproduction, publication, or distribution.</string>
+    <string name="terms15">If we provide desktop, mobile, or other applications for download, you may download a single copy to your computer or mobile device
+        solely for your own personal, non-commercial use, provided you agree to be bound by our end-user license agreement for such applications.</string>
+    <string name="terms16">THE APP IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS
+        OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY FOR INFORMATION, SERVICES, UNINTERRUPTED ACCESS, OR PRODUCTS PROVIDED THROUGH OR IN CONNECTION
+        WITH THE APP, INCLUDING WITHOUT LIMITATION THE SOFTWARE LICENSED TO YOU AND THE RESULTS OBTAINED THROUGH THE APP. SPECIFICALLY, WE DISCLAIM ANY AND
+        ALL WARRANTIES, INCLUDING WITHOUT LIMITATION:</string>
+    <string name="terms17">1) ANY WARRANTIES CONCERNING THE AVAILABILITY, ACCURACY, USEFULNESS, OR CONTENT OF INFORMATION, PRODUCTS
+        OR SERVICES;
+    </string>
+    <string name="terms18">2) ANY WARRANTIES OF TITLE, WARRANTY OF NON-INFRINGEMENT, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR</string>
+    <string name="terms19"><b>Disclaimer of Warranties: </b></string>
+    <!--                 end TERMS PAGE          -->
+
+    <!--          Profile Information Page Start      -->
+    <string name="name"><b>What is your name?</b></string>
+    <string name="birth"><b>Your date of birth?</b></string>
+    <string name="bio"><b>A short bio</b></string>
+    <string name="appear">this is how it’ll appear on your profile.</string>
+    <string name="show">the profile will show your age.</string>
+    <string name="I_am_a">I’m a…</string>
+    <string name="woman">Woman</string>
+    <string name="man">Man</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="user_name">Name</string>
+    <string name="other">Other</string>
+    <string name="next">Next</string>
+    <!--          Profile Information Page End        -->
+
+    <!--          Profile Information Page2 Start     -->
+    <string name="who"><b>Who do you want to see?</b></string>
+    <string name="here_for"><b>I’m here for...</b></string>
+    <string name="Everyone">Everyone</string>
+    <string name="Long">Long-term partner</string>
+    <string name="Short">Short-term partner</string>
+    <string name="Friends">Friends</string>
+    <string name="concert">Concert buddies</string>
+    <string name="clear">Clear Your Choose</string>
+    <string name="both">Fine with both short &amp; long term</string>
+
+    <!--          Profile Information Page2 End       -->
+    <!--          Short Bio Page                      -->
+    <string name="short_bio"><b>A short bio</b></string>
+
+    <!--          Short Bio Page End                  -->
+
+    <string name="sign_up">SIGN UP</string>
+    <string name="mail">jane@example.com</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign">sign up</string>
+    <string name="log">log in</string>
+    <string name="with_google">sign up with Google</string>
+    <string name="log_with_google">log in with Google</string>
+    <string name="forgot">Forgot your password?</string>
+    <string name="reset_pass">Reset Password</string>
+    <string name="reset_text">Enter the email associated with your account and we’ll send an email with instructions to reset your password.</string>
+    <string name="email">email</string>
+    <string name="resetPass">send instructions</string>
+    <string name="check_email"><b>Check your email</b></string>
+    <string name="check_email_text">We have sent a password recover instructions to your email</string>
+    <string name="fff">11</string>
+    <string name="title_activity_privacy">Privacy</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="default_web_client_id">349144952504-lj6abkqsd2giq9q4lnhd71mmk1r1p3bb.apps.googleusercontent.com</string>
+
+    <!--       Add Pictures                   -->
+    <string name="add_pic"><b>Add relevant and recent pics</b></string>
+    <string name="pic">Upload at least 3 photos.</string>
+    <string name="pic2">The first photo is your profile photo.</string>
+    <string name="choose"><b>Choose your best shots. We recommend a photo where we can see your face clearly,
+        and a photo that best represents your body. The photos should be actual, nobody likes surprises!</b></string>
+    <string name="gallery">gallery</string>
+    <string name="camera">camera</string>
+
+</resources>
