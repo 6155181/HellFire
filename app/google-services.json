@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "349144952504",
+    "firebase_url": "https://hellfire-fc145-default-rtdb.firebaseio.com",
+    "project_id": "hellfire-fc145",
+    "storage_bucket": "hellfire-fc145.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349144952504:android:1ebb3ab966cd029b954e4d",
+        "android_client_info": {
+          "package_name": "com.example.hellfire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349144952504-1l0lol5b4ejjv4m9t2mdu9i8ssnjh8gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hellfire",
+            "certificate_hash": "fc9be663d0786d62a30553e6c59280f7a1b47a1e"
+          }
+        },
+        {
+          "client_id": "349144952504-lj6abkqsd2giq9q4lnhd71mmk1r1p3bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA11DkUq-qeZopmOZfSgAllRIKzTCqyur8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349144952504-lj6abkqsd2giq9q4lnhd71mmk1r1p3bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
