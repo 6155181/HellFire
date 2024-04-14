@@ -34,8 +34,7 @@ public class BeforeStart extends AppCompatActivity {
                 // Действие при клике на "privacy policy"
                 //
                 // Toast.makeText(Before.this, "Вы перешли к политике конфиденциальности", Toast.LENGTH_SHORT).show();
-                // Здесь вы можете запустить активность для политики конфиденциальности
-                // Например:
+
                 Intent intent = new Intent(BeforeStart.this, PrivacyPolicy.class);
                 startActivity(intent);
                 finish();
@@ -50,8 +49,7 @@ public class BeforeStart extends AppCompatActivity {
             public void onClick(View view) {
                 // Действие при клике на "terms"
                 //Toast.makeText(Before.this, "Вы перешли к условиям использования", Toast.LENGTH_SHORT).show();
-                // Здесь вы можете запустить активность для условий использования
-                // Например:
+
                 Intent intent = new Intent(BeforeStart.this, TermsActivity.class);
                 startActivity(intent);
             }
@@ -68,7 +66,6 @@ public class BeforeStart extends AppCompatActivity {
         // Устанавливаем текст в TextView и делаем ссылки кликабельными
         textView.setText(builder);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
-
     }
 
     public void to_SignUp(View view) {

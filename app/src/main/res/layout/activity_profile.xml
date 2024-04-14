@@ -6,13 +6,167 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
-    <TextView
-        android:id="@+id/textView10"
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/my_beg"
+        app:layout_constraintEnd_toStartOf="@+id/properties"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <ImageButton
+        android:id="@+id/properties"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/my_beg"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/property_icon" />
+
+    <ImageView
+        android:id="@+id/iv_profile_image"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/circ_bg"
+        android:backgroundTint="@color/my_dark_beg"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/person_icon" />
+
+    <EditText
+        android:id="@+id/et_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PROFILE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:ems="7"
+        android:inputType="text"
+        android:text="Name"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_image" />
+
+    <EditText
+        android:id="@+id/et_profile_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_name" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_profile_age">
+
+        <EditText
+            android:id="@+id/et_my_priority"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="39dp"
+            android:gravity="center"
+            android:hint="description"
+            android:inputType="textMultiLine"
+            android:maxLines="7"
+            android:scrollbars="vertical"
+            android:textColor="@color/my_black"
+            android:textSize="19sp"
+
+            />
+
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnMessage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/my_beg"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFavorites"
+        app:layout_constraintEnd_toStartOf="@+id/btnProfile"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFavorites"
+        app:layout_constraintTop_toTopOf="@+id/btnFavorites"
+        app:srcCompat="@drawable/message_icon" />
+
+    <ImageButton
+        android:id="@+id/btnAddFavorites"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/my_beg"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFavorites"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnFavorites"
+        app:srcCompat="@drawable/add_favorites_icon" />
+
+    <ImageButton
+        android:id="@+id/btnFavorites"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/my_beg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMessage"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toEndOf="@+id/btnSearch"
+        app:srcCompat="@drawable/favorites_icon" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/my_beg"
+        android:onClick="toSearchUser"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFavorites"
+        app:layout_constraintEnd_toStartOf="@+id/btnFavorites"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAddFavorites"
+        app:layout_constraintTop_toTopOf="@+id/btnFavorites"
+        app:srcCompat="@drawable/search_icon" />
+
+    <ImageButton
+        android:id="@+id/btnProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/my_beg"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFavorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMessage"
+        app:layout_constraintTop_toTopOf="@+id/btnFavorites"
+        app:srcCompat="@drawable/profile_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

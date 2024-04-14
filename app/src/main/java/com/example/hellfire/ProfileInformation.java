@@ -1,21 +1,23 @@
 package com.example.hellfire;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.hellfire.Models.User;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hellfire.Models.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +31,7 @@ public class ProfileInformation extends AppCompatActivity {
     RadioGroup radioGroup;
     private FirebaseAuth mAuth;
     FirebaseUser mUser;
+
     private String user_yearOfBirth;
     private String user_monthOfBirth;
     private String user_dateOfBirth;
@@ -146,17 +149,22 @@ public class ProfileInformation extends AppCompatActivity {
         mUser = mAuth.getCurrentUser();
         String userId = mUser.getUid();
         String email = mUser.getEmail();
+        //String createdTimestamp = mUser.timestampToString();
+        //String user_id = mUser.getUid();
+        Timestamp createdTimestamp = null;
+        UserModel userModel = new UserModel(name, createdTimestamp, userId, email, user_yearOfBirth, user_monthOfBirth, user_dateOfBirth, gender);
+        //mDatabase.child("users").child(userId).setValue(userModel);
 
-        User user = new User(name, email, user_yearOfBirth, user_monthOfBirth, user_dateOfBirth, gender);
-        //mDatabase.child("users").child(userId).setValue(user);
-
-        mDatabase.child("users").child(userId).setValue(user)
+        mDatabase.child("users").child(userId).setValue(userModel)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(ProfileInformation.this, "User data saved successfully", Toast.LENGTH_SHORT).show();
+                        Log.d("ProfileInform", "UserId: " + userId);
+                        //Toast.makeText(ProfileInformation.this, "userID"+userId, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProfileInformation.this, "UserModel data saved successfully", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ProfileInformation.this, ProfileInformation2.class);
-                        intent.putExtra("user", user);
+                        intent.putExtra("userModel", userModel);
+
                         startActivity(intent);
                         finish();
                     }

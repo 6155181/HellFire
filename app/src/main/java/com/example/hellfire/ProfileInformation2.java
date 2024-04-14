@@ -1,8 +1,5 @@
 package com.example.hellfire;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +7,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.hellfire.Models.User;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hellfire.Models.UserModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,14 +33,14 @@ public class ProfileInformation2 extends AppCompatActivity {
     private String here_for;
     private Boolean friends;
     private Boolean concert_buddies;
-    private User user;
+    private UserModel userModel;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_information2);
-        user = (User) getIntent().getSerializableExtra("user");
+        userModel = (UserModel) getIntent().getSerializableExtra("userModel");
 
     }
 
@@ -85,23 +85,18 @@ public class ProfileInformation2 extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
         mUser = mAuth.getCurrentUser();
         String userId = mUser.getUid();
-
-        //User user = new User(i_want_see, here_for, friends, concert_buddies);
-        //mDatabase.child("users").child(userId).setValue(user);
-
 
         // Создаем ссылку на узел "users" с уникальным идентификатором пользователя
         DatabaseReference userRef = mDatabase.child("users").child(userId);
 
-        user.i_want_see = selectedRadioButton_see.getText().toString();
-        user.here_for = here_for;  //selectedRadioButton_for.getText().toString();
-        user.friends = radioFriends.isChecked();
-        user.concert_buddies = radioConcert_buddies.isChecked();
-        // Вызываем метод toMap() у объекта User, чтобы получить данные в формате Map
-        Map<String, Object> userMap = user.toMap();
+        userModel.setI_want_see(selectedRadioButton_see.getText().toString())  ;
+        userModel.setHere_for(here_for);  //selectedRadioButton_for.getText().toString();
+        userModel.setFriends(radioFriends.isChecked());
+        userModel.setConcert_buddies(radioConcert_buddies.isChecked());
+        // Вызываем метод toMap() у объекта UserModel, чтобы получить данные в формате Map
+        Map<String, Object> userMap = userModel.toMap();
 
         // Сохраняем данные пользователя в базу данных
         userRef.setValue(userMap)
@@ -111,7 +106,7 @@ public class ProfileInformation2 extends AppCompatActivity {
                         // Данные успешно сохранены
 
                         Intent intent = new Intent(ProfileInformation2.this, ShortBio.class);
-                        intent.putExtra("user", user);
+                        intent.putExtra("userModel", userModel);
                         startActivity(intent);
                         finish();
                     }
@@ -125,7 +120,8 @@ public class ProfileInformation2 extends AppCompatActivity {
                 });
     }
 
-    public void toProfileInformation(View view) {
+
+     void toProfileInformation(View view) {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -141,7 +137,7 @@ public class ProfileInformation2 extends AppCompatActivity {
 
 
         Intent intent = new Intent(ProfileInformation2.this, ProfileInformation.class);
-        intent.putExtra("user", user);
+        intent.putExtra("userModel", userModel);
         startActivity(intent);
         finish();
     }

@@ -10,4 +10,6 @@
     <color name="my_black">#091420</color>
     <color name="my_beg">#FFFBF2</color>
     <color name="my_gray">#B1A6A6</color>
+
+    <color name="my_dark_beg">#E9E3D8</color>
 </resources>

@@ -1,10 +1,10 @@
 package com.example.hellfire;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dive_in(View view) {
-        Intent intent = new Intent(MainActivity.this, LogIn.class);
+        Intent intent = new Intent(MainActivity.this, Events.class);
         startActivity(intent);
         finish();
     }

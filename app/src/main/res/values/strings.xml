@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">HellFire</string>
+    <string name="client_id">349144952504-lj6abkqsd2giq9q4lnhd71mmk1r1p3bb.apps.googleusercontent.com</string>
     <string name="dive_in">DIVE IN</string>
     <string name="new_here">NEW HERE</string>
     <!-- A few things... page                -->
@@ -28,7 +30,7 @@
         We also collect information about your device, such as your IP address, device type, and browser type.</string>
     <string name="privacy_page4"><b>How We Use Your Information</b></string>
     <string name="privacy_page5">We use your information to provide and improve our dating app, to customize your
-        user experience, to communicate with you, and to comply with legal obligations.</string>
+        userModel experience, to communicate with you, and to comply with legal obligations.</string>
     <string name="privacy_page6"><b>How We Share Your Information</b></string>
     <string name="privacy_page7">We may share your information with third-party service providers who help us operate
         our dating app, such as hosting and data storage providers. We may also share your information if required
@@ -79,7 +81,7 @@
     <string name="terms14">You may print or download one copy of a reasonable number of pages of the App for your own personal,
         non-commercial use and not for further reproduction, publication, or distribution.</string>
     <string name="terms15">If we provide desktop, mobile, or other applications for download, you may download a single copy to your computer or mobile device
-        solely for your own personal, non-commercial use, provided you agree to be bound by our end-user license agreement for such applications.</string>
+        solely for your own personal, non-commercial use, provided you agree to be bound by our end-userModel license agreement for such applications.</string>
     <string name="terms16">THE APP IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS
         OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY WARRANTY FOR INFORMATION, SERVICES, UNINTERRUPTED ACCESS, OR PRODUCTS PROVIDED THROUGH OR IN CONNECTION
         WITH THE APP, INCLUDING WITHOUT LIMITATION THE SOFTWARE LICENSED TO YOU AND THE RESULTS OBTAINED THROUGH THE APP. SPECIFICALLY, WE DISCLAIM ANY AND
@@ -116,12 +118,119 @@
     <string name="concert">Concert buddies</string>
     <string name="clear">Clear Your Choose</string>
     <string name="both">Fine with both short &amp; long term</string>
-
     <!--          Profile Information Page2 End       -->
+
     <!--          Short Bio Page                      -->
     <string name="short_bio"><b>A short bio</b></string>
-
     <!--          Short Bio Page End                  -->
+
+    <!--          Favorites Page start                -->
+    <string name="your_favorites"><b>What are your favorites?</b></string>
+    <string name="rock"><b>rock</b></string>
+    //
+    <string name="pop"><b>pop</b></string>
+    //
+    <string name="hip_hop"><b>hip-hop</b></string>
+    //
+    <string name="electronic"><b>electronic music</b></string>
+    //
+    <string name="jazz"><b>jazz</b></string>
+    //
+    <string name="classical"><b>classical music</b></string>
+    //
+    <string name="reggae"><b>reggae</b></string>
+    //
+    <string name="blues"><b>blues</b></string>
+    //
+    <string name="metal"><b>metal rock</b></string>
+    <string name="country"><b>country</b></string>
+    //
+    <string name="indie"><b>indie</b></string>
+    //
+
+    <string name="folk"><b>folk</b></string>
+    //
+    <string name="latin"><b>latin music</b></string>
+    //
+    <string name="soul"><b>soul</b></string>
+    //
+    <string name="techno"><b>techno</b></string>
+    //
+    <string name="punk"><b>punk rock</b></string>
+    //
+    <string name="disco"><b>disco</b></string>
+    //
+    <string name="rap"><b>rap</b></string>
+    //
+    <string name="dubstep"><b>dubstep</b></string>
+    //
+    <string name="jungle"><b>jungle</b></string>
+    //
+    <string name="reggaeton"><b>reggaeton</b></string>
+    <string name="ambient"><b>ambient</b></string>
+    //
+    <string name="grunge"><b>grunge</b></string>
+    //
+    <string name="dub"><b>dub</b></string>
+    //
+    <string name="ska"><b>ska</b></string>
+    <string name="house"><b>house</b></string>
+    //
+    <string name="trance"><b>trance</b></string>
+    //
+    <string name="indie_rock"><b>indie rock</b></string>
+    //
+    <string name="bossa"><b>bossa nova</b></string>
+    <string name="chanson"><b>chanson</b></string>
+    //
+    <string name="alter"><b>alternative</b></string>
+    //
+    <string name="ethnic"><b>ethnic music</b></string>
+    //
+    <string name="jfunk"><b>jazz funk</b></string>
+    //
+    <string name="clas"><b>classic rock</b></string>
+    //
+    <string name="gothrock"><b>gothic rock</b></string>
+    //
+    <string name="trash"><b>trash metal</b></string>
+    //
+    <string name="blrock"><b>blues rock</b></string>
+    //
+    <string name="hard_rock"><b>hard rock</b></string>
+    //
+    <string name="garage"><b>garage rock</b></string>
+    //
+    <string name="psyc"><b>psychedelic rock</b></string>
+    <string name="post"><b>post-rock</b></string>
+    //
+    <string name="ambienthou"><b>ambient house</b></string>
+    //
+    <string name="experim"><b>experimental</b></string>
+    //
+    <string name="thop"><b>trip-hop</b></string>
+    //
+    <string name="bluegrass"><b>bluegrass</b></string>
+    //
+    <string name="Industrial"><b>industrial</b></string>
+    //
+    <string name="synthpop"><b>synth-pop</b></string>
+    <string name="electrofunk"><b>electro-funk</b></string>
+    //
+    <string name="neosoul"><b>neo-soul</b></string>
+    //
+    <string name="krau"><b>krautrock</b></string>
+    <string name="nwava"><b>new wave</b></string>
+    //
+    <string name="celtic"><b>celtic music</b></string>
+    //
+    <string name="afrobeat"><b>afrobeat</b></string>
+    <string name="rapmet"><b>rap metal</b></string>
+    //
+    <string name="glamrock"><b>glam rock</b></string>
+    //
+
+    <!--          Favorites Page утви                 -->
 
     <string name="sign_up">SIGN UP</string>
     <string name="mail">jane@example.com</string>
@@ -150,5 +259,14 @@
         and a photo that best represents your body. The photos should be actual, nobody likes surprises!</b></string>
     <string name="gallery">gallery</string>
     <string name="camera">camera</string>
+
+    <string name="set"><b>Your profile is all set!</b></string>
+    <string name="can"><b>You can change information later.</b></string>
+    <string name="now">now match</string>
+
+    <string name="find_user"><b>Your matches are here</b></string>
+    <string name="find">find</string>
+    <string name="enter_keyword" />
+    <string name="search" />
 
 </resources>
