@@ -22,9 +22,10 @@
         <ImageView
             android:id="@+id/header_image"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
             android:src="@drawable/placeholder_image" />
 
         <FrameLayout
@@ -40,12 +41,14 @@
                 android:text="Artist Name"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:textColor="@color/my_black"/>
 
         </FrameLayout>
 
         <TextView
-            android:id="@+id/see_more"
+            android:id="@+id/city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -53,6 +56,26 @@
             android:text="See more"
             android:textColor="@color/my_gray"
             android:textStyle="italic" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="date"
+            android:textColor="@color/my_gray"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/favorite_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/icon_add_favorite"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:padding="8dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
 

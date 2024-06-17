@@ -3,6 +3,7 @@ package com.example.hellfire.utils;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ public class AndroidUtil {
         Toast.makeText(context,message,Toast.LENGTH_LONG).show();
     }
     public static void passUserModelAsIntent(Intent intent, UserModel model){
-        intent.putExtra("username",model.getUsername());
+        intent.putExtra("username",model.getUserName());
         //intent.putExtra("phone",model.getPhone());
         intent.putExtra("userId",model.getUserId());
         intent.putExtra("userAge", model.getUserAge());
@@ -27,7 +28,7 @@ public class AndroidUtil {
 
     public static UserModel getUserModelFromIntent(Intent intent){
         UserModel userModel = new UserModel();
-        userModel.setUsername(intent.getStringExtra("username"));
+        userModel.setUserName(intent.getStringExtra("username"));
         //userModel.setPhone(intent.getStringExtra("phone"));
         userModel.setUserId(intent.getStringExtra("userId"));
         userModel.setUserAge(intent.getStringExtra("userAge"));
@@ -35,7 +36,17 @@ public class AndroidUtil {
         return userModel;
     }
 
-    public static void setProfilePic(Context context, Uri imageUri, ImageView imageView){
-        Glide.with(context).load(imageUri).apply(RequestOptions.circleCropTransform()).into(imageView);
+    public static void setProfilePic(Context context, Uri imageUri, ImageView imageView) {
+        if (context == null) {
+            Log.e("AndroidUtil", "Context is null");
+        }
+        if (imageView == null) {
+            Log.e("AndroidUtil", "ImageView is null");
+        }
+        if (context != null && imageView != null) {
+            Glide.with(context).load(imageUri).apply(RequestOptions.circleCropTransform()).into(imageView);
+        }
     }
+
+
 }

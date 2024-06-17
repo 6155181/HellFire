@@ -1,8 +1,5 @@
 package com.example.hellfire;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,6 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -75,7 +75,7 @@ public class LogIn extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             Toast.makeText(LogIn.this, "Welcome back " + currentUser.getEmail(), Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LogIn.this, UpcomingShow.class);
+            Intent intent = new Intent(LogIn.this, Main_user.class);
             intent.putExtra("EMAIL_ACCOUNT", currentUser.getEmail());
             startActivity(intent);
             finish();
@@ -104,8 +104,8 @@ public class LogIn extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
-                            Toast.makeText(LogIn.this, "Auth Success", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LogIn.this, Profile.class);
+                            //Toast.makeText(LogIn.this, "Auth Success", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LogIn.this, Main_user.class);
                             intent.putExtra("EMAIL_ACCOUNT", email);
                             startActivity(intent);
                             finish();
@@ -114,7 +114,6 @@ public class LogIn extends AppCompatActivity {
                         }
                     }
                 });
-
     }
 
     public void toMain(View view) {

@@ -1,5 +1,6 @@
 package com.example.hellfire;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ public class Favorites extends AppCompatActivity {
     private UserModel userModel;
     private DatabaseReference mDatabase;
     private ArrayList<String> selectedButtons = new ArrayList<>();
+    ProgressDialog progressDialog;
     //private  String hard;
     Button btn_hard, btn_rap, btn_house, btn_pop, btn_i_rock, btn_cl_m, btn_l_m, btn_blues, btn_folk,
             btn_disco, btn_amb, btn_pu_r,btn_trash, btn_cl_r, btn_techno, btn_soul, btn_jazz, btn_reggae,
@@ -731,14 +733,20 @@ public class Favorites extends AppCompatActivity {
 }
 
     public void shortBio(View view) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Google ign In...");
+        progressDialog.show();
         Intent intent = new Intent(Favorites.this, ShortBio.class);
         startActivity(intent);
         intent.putExtra("userModel", userModel);
-
+        progressDialog.dismiss();
         finish();
     }
 
     public void toAddPicture(View view) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Google ign In...");
+        progressDialog.show();
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -751,6 +759,7 @@ public class Favorites extends AppCompatActivity {
         startActivity(intent);
         //Toast.makeText(this, "YESS"+userModel.getUserBio(), Toast.LENGTH_SHORT).show();
         intent.putExtra("userModel", userModel);
+        progressDialog.dismiss();
         finish();
     }
 }

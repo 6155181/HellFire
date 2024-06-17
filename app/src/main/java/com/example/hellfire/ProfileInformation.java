@@ -1,5 +1,6 @@
 package com.example.hellfire;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -37,7 +38,7 @@ public class ProfileInformation extends AppCompatActivity {
     private String user_dateOfBirth;
     private String gender;
     private DatabaseReference mDatabase;
-// ...
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +118,9 @@ public class ProfileInformation extends AppCompatActivity {
 
     public void userInfo(View view) {
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Please wait...");
+        progressDialog.show();
         uname = findViewById(R.id.etName);
         String name = uname.getText().toString().trim();
         if(name.equals("") || name == null) {
@@ -150,22 +154,22 @@ public class ProfileInformation extends AppCompatActivity {
         String userId = mUser.getUid();
         String email = mUser.getEmail();
         //String createdTimestamp = mUser.timestampToString();
-        //String user_id = mUser.getUid();
+
         Timestamp createdTimestamp = null;
         UserModel userModel = new UserModel(name, createdTimestamp, userId, email, user_yearOfBirth, user_monthOfBirth, user_dateOfBirth, gender);
-        //mDatabase.child("users").child(userId).setValue(userModel);
 
         mDatabase.child("users").child(userId).setValue(userModel)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
+
                         Log.d("ProfileInform", "UserId: " + userId);
                         //Toast.makeText(ProfileInformation.this, "userID"+userId, Toast.LENGTH_SHORT).show();
                         Toast.makeText(ProfileInformation.this, "UserModel data saved successfully", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(ProfileInformation.this, ProfileInformation2.class);
                         intent.putExtra("userModel", userModel);
-
                         startActivity(intent);
+                        progressDialog.dismiss();
                         finish();
                     }
                 })

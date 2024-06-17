@@ -34,9 +34,10 @@
 
     <EditText
         android:id="@+id/etRegEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         android:layout_marginTop="22dp"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -47,40 +48,89 @@
 
     <EditText
         android:id="@+id/etRegPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         android:layout_marginTop="22dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColorHint="@color/my_gray"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toStartOf="@+id/togglePasswordVisibility"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRegEmail" />
+    <ImageButton
+        android:id="@+id/togglePasswordVisibility"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="18dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/closed_eye2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/etRegPassword" />
+
+    <EditText
+        android:id="@+id/etConfirmRegPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColorHint="@color/my_gray"
+        android:hint="@string/confirm_password"
+        app:layout_constraintEnd_toStartOf="@+id/toggleConfirmPasswordVisibility"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRegPassword" />
+
+    <ImageButton
+        android:id="@+id/toggleConfirmPasswordVisibility"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="18dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/closed_eye2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etConfirmRegPassword" />
+    <TextView
+        android:id="@+id/tvPasswordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="70dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        android:text="@string/passwords_do_not_match"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmRegPassword" />
+
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/my_black"
+        android:background="@drawable/button_click_background"
         android:onClick="signUp"
         android:text="@string/sign"
         android:textColor="@color/my_beg"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/etRegPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPasswordError" />
 
     <Button
         android:id="@+id/btnGoogleSignUp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="22dp"
-        android:backgroundTint="@color/my_black"
+        android:background="@drawable/button_click_background"
         android:textColor="@color/my_beg"
         android:text="@string/with_google"
-
         app:layout_constraintHorizontal_bias="0.498"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

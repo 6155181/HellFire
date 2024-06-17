@@ -1,5 +1,6 @@
 package com.example.hellfire;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,7 @@ public class ProfileInformation2 extends AppCompatActivity {
     private Boolean friends;
     private Boolean concert_buddies;
     private UserModel userModel;
+    ProgressDialog progressDialog;
 
 
     @Override
@@ -45,6 +47,10 @@ public class ProfileInformation2 extends AppCompatActivity {
     }
 
     public void toBio(View view) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Please wait...");
+        progressDialog.show();
+
         radioGroup_see = findViewById(R.id.who);
         int selected_see = radioGroup_see.getCheckedRadioButtonId();
 
@@ -108,6 +114,7 @@ public class ProfileInformation2 extends AppCompatActivity {
                         Intent intent = new Intent(ProfileInformation2.this, ShortBio.class);
                         intent.putExtra("userModel", userModel);
                         startActivity(intent);
+                        progressDialog.dismiss();
                         finish();
                     }
                 })
@@ -120,28 +127,6 @@ public class ProfileInformation2 extends AppCompatActivity {
                 });
     }
 
-
-     void toProfileInformation(View view) {
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
-        String userId = mUser.getUid();
-
-        mDatabase.child("users").child(userId).child("username").setValue(null);
-        mDatabase.child("users").child(userId).child("email").setValue(null);
-        mDatabase.child("users").child(userId).child("user_yearOfBirth").setValue(null);
-        mDatabase.child("users").child(userId).child("user_monthOfBirth").setValue(null);
-        mDatabase.child("users").child(userId).child("user_dateOfBirth").setValue(null);
-        mDatabase.child("users").child(userId).child("user_gender").setValue(null);
-
-
-        Intent intent = new Intent(ProfileInformation2.this, ProfileInformation.class);
-        intent.putExtra("userModel", userModel);
-        startActivity(intent);
-        finish();
-    }
-
     public void clear(View view) {
         radioGroup_see = findViewById(R.id.who);
         radioGroup_for = findViewById(R.id.here);
@@ -152,5 +137,13 @@ public class ProfileInformation2 extends AppCompatActivity {
         radioGroup_for.clearCheck();
         radioGroup_Friends.clearCheck();
         radioGroup_concert.clearCheck();
+    }
+
+    public void toProfileInformation(View view) {
+
+        Intent intent = new Intent(ProfileInformation2.this, ProfileInformation.class);
+        intent.putExtra("userModel", userModel);
+        startActivity(intent);
+        finish();
     }
 }

@@ -1,7 +1,6 @@
 package com.example.hellfire;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -11,10 +10,17 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BeforeStart extends AppCompatActivity {
 
+    private CheckBox checkBoxAgree;
+    private Button buttonAgree;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +28,10 @@ public class BeforeStart extends AppCompatActivity {
 
         // Получаем ссылку на TextView из разметки
         TextView textView = findViewById(R.id.agree);
+        checkBoxAgree = findViewById(R.id.checkBoxAgree);
+        buttonAgree = findViewById(R.id.button2);
+
+
 
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append("By clicking \"I agree\" you also agree to our ");
@@ -66,11 +76,19 @@ public class BeforeStart extends AppCompatActivity {
         // Устанавливаем текст в TextView и делаем ссылки кликабельными
         textView.setText(builder);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        checkBoxAgree.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            buttonAgree.setEnabled(isChecked);
+        });
     }
 
     public void to_SignUp(View view) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Google ign In...");
+        progressDialog.show();
         Intent intent = new Intent(BeforeStart.this, SignUp.class);
         startActivity(intent);
+        progressDialog.dismiss();
         finish();
     }
 

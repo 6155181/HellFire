@@ -4,6 +4,11 @@
     <string name="client_id">349144952504-lj6abkqsd2giq9q4lnhd71mmk1r1p3bb.apps.googleusercontent.com</string>
     <string name="dive_in">DIVE IN</string>
     <string name="new_here">NEW HERE</string>
+
+    <string name="passwords_do_not_match">Password mismatch error</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+
     <!-- A few things... page                -->
     <string name="a_few"><b>A few things before we start.</b></string>
     <string name="follow_the">Follow the rules below for the best experience.</string>
@@ -230,7 +235,7 @@
     <string name="glamrock"><b>glam rock</b></string>
     //
 
-    <!--          Favorites Page утви                 -->
+    <!--          Favorites Page                 -->
 
     <string name="sign_up">SIGN UP</string>
     <string name="mail">jane@example.com</string>
@@ -268,5 +273,11 @@
     <string name="find">find</string>
     <string name="enter_keyword" />
     <string name="search" />
+
+    <string name="looking_for">I’m looking for...</string>
+    <string name="apply">Apply</string>
+    <string name="location">By Location</string>
+    <string name="date">By Date</string>
+    <string name="genre">By Genre</string>
 
 </resources>

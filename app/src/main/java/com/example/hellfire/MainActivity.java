@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,12 +18,11 @@ public class MainActivity extends AppCompatActivity {
     public void before(View view) {
         Intent intent = new Intent(MainActivity.this, BeforeStart.class);
         startActivity(intent);
-        finish();
+        //finish();
     }
-
     public void dive_in(View view) {
-        Intent intent = new Intent(MainActivity.this, Events.class);
+        Intent intent = new Intent(MainActivity.this, Main_user.class);
         startActivity(intent);
-        finish();
+        //finish();
     }
 }

@@ -158,8 +158,8 @@ public class UserModel implements Serializable {
     public void setUserId(String userId){
         this.userId = userId;
     }
-    public String getUsername() {return username;}
-    public void setUsername(String username) {this.username = username;}
+    public String getUserName() {return username;}
+    public void setUserName(String username) {this.username = username;}
     public String getUser_yearOfBirth() { return  user_yearOfBirth;}
     public String getUser_dateOfBirth() { return user_dateOfBirth; }
     public String getUser_monthOfBirth() { return user_monthOfBirth; }

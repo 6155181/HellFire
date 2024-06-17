@@ -65,7 +65,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+
     implementation("com.google.firebase:firebase-database:20.3.0")
     //implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
     implementation("com.google.firebase:firebase-firestore:24.9.1")
@@ -76,9 +76,10 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
 
 
     //implementation("com.google.firebase:firebase-auth")
@@ -87,21 +88,21 @@ dependencies {
 
     implementation ("com.google.android.libraries.identity.googleid:googleid:1.1.0")
 
-    implementation ("com.firebaseui:firebase-ui-firestore:8.0.0")
+    implementation ("com.firebaseui:firebase-ui-firestore:8.0.2")
     implementation ("com.firebaseui:firebase-ui-database:8.0.0")
     implementation ("com.github.dhaval2404:imagepicker:2.1")
     implementation ("androidx.fragment:fragment:1.6.2")
-    implementation ("com.github.bumptech.glide:glide:4.x")
+   
     implementation ("com.squareup.picasso:picasso:2.71828")
 
-
-    //implementation ("com.ticketmaster.presence:presence:2.22.6")
-   // implementation ("com.ticketmaster.presence:secure-entry:1.2.9")
 
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation ("androidx.cardview:cardview:1.0.0")
+
+    // Flexbox
+    implementation ("com.google.android.flexbox:flexbox:3.0.0")
 
 }
 

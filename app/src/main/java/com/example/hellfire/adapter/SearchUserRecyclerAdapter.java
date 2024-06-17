@@ -14,9 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.hellfire.ChatActivity;
 import com.example.hellfire.Models.UserModel;
 import com.example.hellfire.R;
-import com.example.hellfire.SearchUser;
+import com.example.hellfire.utils.AndroidUtil;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -37,7 +38,7 @@ public class SearchUserRecyclerAdapter extends FirebaseRecyclerAdapter<UserModel
 
     @Override
     protected void onBindViewHolder(@NonNull UserModelViewHolder holder, int position, @NonNull UserModel model) {
-        holder.usernameText.setText(model.getUsername());
+        holder.usernameText.setText(model.getUserName());
         holder.userAge.setText(model.getUserAge());
 ///////////////////////////////////////////////////////////////
         String userId = model.getUserId();   //  <----------------------------------------------------------
@@ -71,8 +72,8 @@ public class SearchUserRecyclerAdapter extends FirebaseRecyclerAdapter<UserModel
 
         holder.itemView.setOnClickListener(v -> {
             //navigate to chat activity
-            Intent intent = new Intent(context, SearchUser.class);
-            //AndroidUtil.passUserModelAsIntent(intent,model);
+            Intent intent = new Intent(context, ChatActivity.class);
+            AndroidUtil.passUserModelAsIntent(intent,model);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
         });

@@ -65,13 +65,11 @@ public class SearchUser extends AppCompatActivity {
         adapter.startListening();
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
         if(adapter != null)
             adapter.startListening();
-
     }
 
     @Override
